@@ -1,0 +1,21 @@
+module Airline{
+
+    struct Flight {
+        string code;
+        string departureAirport;
+        string arrivalAirport;
+        string departureTime;
+        string arrivalTime;
+        double price;
+    };
+
+    typedef sequence<Flight> FlightList;
+
+    interface ClientService {
+        void registerNewPassenger(in string passengerName, in string phonenumber, in string address, in string email, in string passport, in string seattype);
+        void viewAllFlights();
+        void availableseats();
+        void payment(in double pay);
+    };
+
+};

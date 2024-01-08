@@ -1,0 +1,24 @@
+module Airline {
+
+    struct Flight {
+        string code;
+        string departureAirport;
+        string arrivalAirport;
+        string departureTime;
+        string arrivalTime;
+        double price;
+    };
+
+    typedef sequence<Flight> FlightList;
+
+    interface AdminService {
+        void addNewFlight(in string code, in string departureAirport, in string arrivalAirport, in string departureTime, in string arrivalTime, in double price);
+        void addNewAirport(in string code, in string city);
+        void registerNewPassenger(in string passengerName, in string phonenumber, in string address, in string email, in string passport, in string seattype);
+        void viewAllFlights();
+        void editFlight();
+        void editAirport();
+
+    };
+
+};

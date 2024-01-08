@@ -1,0 +1,7 @@
+module Airline {
+
+    interface AuthService {
+        boolean Authothification(in string a, in string b);
+    };
+
+};
